@@ -1,4 +1,4 @@
-package com.jamal.choresly
+package com.jamal.app
 
 import org.junit.Test
 
