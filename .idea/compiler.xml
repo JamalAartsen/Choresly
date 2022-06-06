@@ -4,6 +4,7 @@
     <bytecodeTargetLevel target="1.8">
       <module name="Choresly.app" target="11" />
       <module name="Choresly.data" target="11" />
+      <module name="Choresly.firebase" target="11" />
       <module name="Choresly.presentation" target="11" />
     </bytecodeTargetLevel>
   </component>
