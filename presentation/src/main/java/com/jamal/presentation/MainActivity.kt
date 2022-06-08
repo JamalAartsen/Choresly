@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        viewModelClass.createUser("voorbdweeeldwwd@gmail.com", "fef") { isSuccessful, exception ->
+        viewModelClass.createUser("voorbdweeeldwwd@gmail.com", "fefefefeff") { isSuccessful, exception ->
             Log.d("Callback", isSuccessful.toString())
             if (isSuccessful) {
                 Log.d("Callback", "Boolean is true! + $exception")

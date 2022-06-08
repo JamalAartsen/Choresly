@@ -1,6 +1,6 @@
-package com.jamal.data
+package com.jamal.data.modules
 
-import com.jamal.data.firebase.authentication.AuthenticationRepository
+import com.jamal.data.authentication.AuthenticationRepository
 import com.jamal.domain.repositories.AuthenticationDomainRepository
 import dagger.Module
 import dagger.Provides
@@ -14,4 +14,5 @@ class DataModule {
     @Provides
     fun provideAuthenticationRepository(authenticationRepository: AuthenticationRepository): AuthenticationDomainRepository =
         authenticationRepository
+
 }
