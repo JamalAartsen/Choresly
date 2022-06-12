@@ -32,5 +32,13 @@ class MainActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.GONE
         }
 
+        Log.d("User", "ID: ${viewModelClass.getCurrentUser()?.id} Name: ${viewModelClass.getCurrentUser()?.displayName} Email: ${viewModelClass.getCurrentUser()?.email}")
+
+        if (viewModelClass.getCurrentUser().id != null) {
+            Log.d("User", "User is not empty")
+        } else {
+            Log.d("User", "User is empty")
+        }
+
     }
 }

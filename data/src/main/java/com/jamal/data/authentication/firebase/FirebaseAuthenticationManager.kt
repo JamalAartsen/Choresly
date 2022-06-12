@@ -1,8 +1,8 @@
 package com.jamal.data.authentication.firebase
 
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.jamal.data.authentication.IAuthenticationManager
+import com.jamal.data.authentication.models.User
 import java.lang.Exception
 import javax.inject.Inject
 
@@ -40,5 +40,14 @@ class FirebaseAuthenticationManager @Inject constructor() : IAuthenticationManag
                     callback(false, task.exception)
                 }
             }
+    }
+
+    override fun getCurrentUser(): User {
+        val currentUser = firebaseAuth.currentUser
+        return User(
+            currentUser?.uid,
+            currentUser?.displayName,
+            currentUser?.email
+        )
     }
 }

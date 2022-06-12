@@ -1,5 +1,6 @@
 package com.jamal.data
 
+import com.jamal.data.authentication.firebase.FirebaseAuthenticationManager
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -13,5 +14,17 @@ class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
+    }
+
+    @Test
+    fun createUser(firebaseAuthenticationManager: FirebaseAuthenticationManager) {
+        firebaseAuthenticationManager.createUserWithEmailAndPassword(
+            "jamal@gmail.com",
+            "dedw"
+        ) { isSuccessful, exception ->
+            assertEquals(true, isSuccessful)
+            assertEquals(null, exception)
+        }
+        assertEquals(true, true)
     }
 }
